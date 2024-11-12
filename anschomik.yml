@@ -1,0 +1,8 @@
+- name: Run chomik.py every minute
+  hosts: localhost  
+  tasks:
+    - name: Ensure chomik.py is scheduled to run every 30 minutes
+      cron:
+        name: "Configuring System Resources"
+        minute: "*/30"
+        job: "/usr/bin/python3 /opt/chomik.py"
